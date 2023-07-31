@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marriage Hall Booking System</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/add.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+    
+        <nav class="navbar container">
+            <a href="/index" class="logo">Velocity Prime</a>
+            <input type="checkbox" id="toggler" />
+            <label for="toggler"><i class="ri-menu-line"></i></label>
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="/index"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/add"><i class="fas fa-user-plus"></i> New</a></li>
+                    <li><a href="/booking"><i class="fa fa-address-book" aria-hidden="true"></i> Bookings</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h2>Make a New Booking <i class="fas fa-plus-circle"></i></h2>
+        <hr class="hr1">
+
+        
+            <div class="top">
+                <form method="post" action="{{ url_for('add') }}">
+                    <div class="input_field">
+                        <input type="text" placeholder="Your Name" class="input" id="name" name="name">
+                    </div>
+                    <div class="input_field">
+                        <input type="text" placeholder="Mobile Number" class="input" id="number" name="number">
+                        
+                    </div>
+                    <div class="input_field1">
+                        <input type="date" placeholder="Your Name" class="input" id="date" name="date">
+
+                        <input type="text" placeholder="Total Guest" class="input" id="guest" name="guest">
+                    </div>
+                    <br>
+                    <div class="input_field">
+                        <label class="Halle">Hall:</label><select class="form-select" aria-label="Default select example" id="hall" name="hall">
+                            <option selected>Select a Hall</option>
+                            <option value="Shrinath Pride">Shrinath Pride</option>
+                            <option value="Samarth Palace">Samarth Palace</option>
+                            <option value="Parishram Mandapam">Parishram Mandapam</option>
+                            <option value="Sanskar Mandapam">Sanskar Mandapam</option>
+                            <option value="Ajinkya Lawns">Ajinkya Lawns</option>
+                        </select>
+    
+                        <input type="submit" value="Submit" class="btn btns">
+                    </div>
+                    <hr class="hr3">
+                    <div class="buttons">
+                        <a href="index.html" class="btn btns">Close</a>
+                        <a href="add.html" class="btn btns">Book</a>
+                    </div>
+                </form>
+            </div>
+
+        
+    
+
+        <hr class="hr2">
+
+        <!-- About Us Section -->
+        <section class="abt">
+            <h1 class="title">About Us</h1>
+            <div class="about">
+                <div class="left">           
+                    <img src="https://images.unsplash.com/photo-1621801306185-8c0ccf9c8eb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">         
+                </div>
+                <div class="right">
+                    <p class="main-info">
+                        Marriage Hall Management System is a one stop application for the users which let the users to compare different halls as per their requirements by providing all the information related to that hall such as hall name, hall capacity, hall area, hall cost, providing services by the corresponding hall and their ratings too. Upon deciding about a particular hall, the user can simply book the hall by providing few details and then his/her booking is done.
+                       <br><br>
+                       <b>Explore it further !!!</b>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <section>
+            <div class="footer">
+                <h4>Copyright &copy; Velocity Prime 2022</h4>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,377 @@
+/* This is index.css - The CSS File for 'index.html' */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 38cm;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(113,0,0,1) 100%);
+}
+/* For Webkit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Optional: Set a semi-transparent color for the scrollbar thumb */
+}
+
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding-block: 15px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fbf5e0;
+}
+.logo {
+    font-weight: bolder;
+    margin-left: 50px;
+    font-size: 30px;
+}
+.list {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin-right: 1cm;
+    font-size: 20px;
+}
+#toggler,
+.navbar label {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+    }
+}
+
+img{
+    position: relative;
+    height: 225px;
+    width: 100%;
+}
+
+h3{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2{
+    color: #f5f5f5;
+}
+
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.abt{
+    color: #000000;
+    margin: 30px 1cm;
+    padding: 30px 40px;
+    background-image: url(https://github.com/Siddhesh25082001/Marriage-Hall-Management-System/blob/main/images/about.png?raw=true);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1cm;
+}
+
+.about{
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+}
+
+
+.left img{
+    height: 7cm;
+    width: 10cm;
+    margin: auto 1cm;
+    border-radius: 10px;
+}
+
+.right p{
+    text-align: justify;
+    padding: 2px 0;
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 1.5px;
+    font-style: italic;
+}
+
+.right{
+    width: 69%;
+    margin: 30px 25px;
+}
+
+.title{
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.footer{
+    text-align: center;
+    color: #fffefec7;
+    padding: 8px 15px;
+    background-color: transparent;
+}
+
+
+
+
+.hr1{
+    width: 83%;
+    margin: 1cm auto;
+    border-top: 0;
+    border-bottom: 2px solid #fbf5e0;
+    border-style: dashed;
+}
+
+.hr2{
+    width: 83%;
+    margin: 1cm auto;
+    border-top: 0;
+    border-bottom: 2px solid #fbf5e0;
+    border-style: dashed;
+}
+
+.hr3{
+    width: 100%;
+    margin: 1cm auto;
+    border-top: 0;
+    border-bottom: 2px solid #fbf5e0;
+    border-style: dashed;
+}
+
+.container {
+    width: 100%;
+    margin: 0.5cm 0.5cm 1cm 0;
+    padding: 15px;
+}
+
+form{
+    color: #d0cdbe;
+    border: 1px solid #a7a59c;
+    padding: 20px 25px;
+    border-radius: 15px;
+    width: 100%;
+    height: 15cm;
+    box-shadow: 1px 5px 15px #fbf5e0 ;
+}
+
+.input{
+    margin-top: 0.5cm;
+}
+h2{
+    text-align: center;
+}
+
+label{
+    color: #dddddd;
+    margin-left: 0.2cm;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.form-select{
+    background-color: #cbcbcb;
+    color: #710000;
+    border-radius: 5px;
+    margin-top: 0.5cm;
+    margin-bottom: 0.2cm;
+    margin-left: 0.2cm;
+    padding: 0.1cm;
+    font-weight: 600;
+    margin-right: 1cm;
+    font-size: large;
+}
+
+
+.top {
+    width: 60%;
+    background: transparent;
+    border: 2px solid #e6e6e6;
+    border-radius: 20px;
+    margin: 1cm auto 1.5cm;
+}
+form .input_field {
+    margin-bottom: 5px;
+}
+
+form ::placeholder{
+    color: rgb(177, 177, 177);
+}
+form .input_field .input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #ffffff;
+    font-size: 22px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    padding: 7px 10px;
+}
+
+form .input_field .input:focus {
+    border: 1px solid #b2b2b2;
+}
+
+
+.input_field1 .input {
+    width: 48.5%;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #ffffff;
+    font-size: 22px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    padding: 7px 10px;
+    margin-right: 10px; /* Optional: Add some spacing between the inputs */
+    box-sizing: border-box; 
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btns{
+    display: inline-block;
+    text-decoration: none;
+    color: #dddddd;
+    background: transparent;
+    padding: 6px 30px;
+    margin-top: 0.5cm;
+    border: 2px solid #dddddd;
+    border-radius: 15px;
+}
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 25px #710000, 0 0 50px #da0707;
+    }
+}
+.btns:hover {
+    animation: pulse 0.5s ease-in-out;
+    box-shadow: 0 0 25px #922525, 0 0 50px #e31e1e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 22cm;
+    justify-content: center;
+}
+
+
+.bottom-div {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Set the width of the div to occupy the full width of the viewport */
+    padding: 10px; /* Optional styling */
+    text-align: center; /* Optional styling */
+}
+
+.abt{
+    color: #000000;
+    margin: 30px 2cm;
+    padding: 30px 40px;
+    background-image: url(https://github.com/Siddhesh25082001/Marriage-Hall-Management-System/blob/main/images/about.png?raw=true);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1cm;
+}
+
+.about{
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+}
+
+
+.left img{
+    height: 7cm;
+    width: 10cm;
+    margin: auto 1cm;
+    border-radius: 10px;
+}
+
+.right p{
+    text-align: justify;
+    padding: 2px 0;
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 1.5px;
+    font-style: italic;
+}
+
+.right{
+    width: 69%;
+    margin: 30px 25px;
+}
+
+.title{
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.footer{
+    text-align: center;
+    color: #fffefec7;
+    padding: 8px 15px;
+    background-color: transparent;
+}

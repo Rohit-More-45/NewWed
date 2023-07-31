@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- This is the Head Section -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marriage Hall Booking System</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/booking.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/newcss1.css') }}">
+
+    </head>
+
+    <!-- This is the Body Section -->
+    <body>
+        <nav class="navbar container">
+            <a href="/index" class="logo">Velocity Prime</a>
+            <input type="checkbox" id="toggler" />
+            <label for="toggler"><i class="ri-menu-line"></i></label>
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="/index"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/add"><i class="fas fa-user-plus"></i> New</a></li>
+                    <li><a href="/booking"><i class="fa fa-address-book" aria-hidden="true"></i> Bookings</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <h2>Your Booking <i class="fa fa-address-book"></i></h2>
+        <hr class="hr1">
+
+        <section class="main">
+            <div class="modal">
+                <table id="example1" class="table hall-1">
+                    <thead>
+                        <td class="attr">Entry No.</td>
+                        <td class="attr">Booked By</td>
+                        <td class="attr">Hall Name</td>
+                        <td class="attr">Contact</td>
+                        <td class="attr">Date</td>
+                        <td class="attr">Aprx. Guest</td>
+                    </thead>
+
+                    <tbody>
+                    {% for entry in booking %}
+                        <tr>
+                            <td>{{entry[0]}}</td>
+                            <td>{{entry[1]}}</td>
+                            <td>{{entry[2]}}</td>
+                            <td>{{entry[3]}}</td>
+                            <td>{{entry[4]}}</td>
+                            <td>{{entry[5]}}</td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+            
+        </section>
+        <section class="main2">
+            <h2>EDIT <i class="fa fa-address-book"></i></h2>
+            <hr class="hr1">
+            <div class="modal2">
+                <table id="example2" class="table hall-1">
+                    <thead>
+                        <td class="attr">Update_For</td>
+                        <td class="attr">Contact</td>
+                        <td class="attr">Old_Hall</td>
+                        <td class="attr">Old_Date</td>
+                        <td class="attr">New_Date</td>
+                        <td class="attr">New_Hall</td>
+                        <td class="attr">Update</td>
+                    </thead>
+
+                    <tbody>
+                        <form action="/update"  method="post">
+                            <td><input type="text" class="input1" id="name1" name="name"></td>
+                            <td><input type="text" class="input1" id="oldnumber" name="number"></td>
+
+                            <td><select class="form-select" class="input1"  id="oldhall" name="hall">
+                            <option selected>Select a Hall</option>
+                            <option value="Shrinath Pride">Shrinath Pride</option>
+                            <option value="Samarth Palace">Samarth Palace</option>
+                            <option value="Parishram Mandapam">Parishram Mandapam</option>
+                            <option value="Sanskar Mandapam">Sanskar Mandapam</option>
+                            <option value="Ajinkya Lawns">Ajinkya Lawns</option>
+                        </select></td>
+
+                            <td><input type="date" class="input2" id="olddate" name="olddate"></td>
+                            <td><input type="date" class="input2" id="newdate" name="newdate"></td>
+
+                            <td><select class="form-select" class="input1"  id="newhall" name="newhall">
+                            <option selected>Select a Hall</option>
+                            <option value="Shrinath Pride">Shrinath Pride</option>
+                            <option value="Samarth Palace">Samarth Palace</option>
+                            <option value="Parishram Mandapam">Parishram Mandapam</option>
+                            <option value="Sanskar Mandapam">Sanskar Mandapam</option>
+                            <option value="Ajinkya Lawns">Ajinkya Lawns</option>
+                        </select></td>
+
+                            <td><input type="submit" value="Update" class="btn btns"></td>
+                        </form >
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="modal2">
+                <table id="example" class="table hall-1">
+                    <thead>
+                        <td class="attr">Booked By</td>
+                        <td class="attr">Contact</td>
+                        <td class="attr">Date</td>
+                        <td class="attr">Hall</td>
+                        <td class="attr">Delete</td>
+                    </thead>
+
+                    <tbody>
+                        <form action="/delete" method="post">
+                            <td><input type="text" class="input1" id="name" name="name"></td>
+                            <td><input type="text" class="input1" id="number" name="number"></td>
+                            <td><input type="date" class="input2" id="date" name="date"></td>
+                            <td><select class="form-select" class="input1"  id="hall" name="hall">
+                            <option selected>Select a Hall</option>
+                            <option value="Shrinath Pride">Shrinath Pride</option>
+                            <option value="Samarth Palace">Samarth Palace</option>
+                            <option value="Parishram Mandapam">Parishram Mandapam</option>
+                            <option value="Sanskar Mandapam">Sanskar Mandapam</option>
+                            <option value="Ajinkya Lawns">Ajinkya Lawns</option>
+                        </select></td>
+                            <td><input type="submit" value="Delete" class="btn btns" ></td>
+                        </form >
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+
+        <hr class="hr2">
+
+
+
+
+
+        <!-- About Us Section -->
+        <div class="bottom-div">
+            <section class="abt">
+                <h1 class="title">About Us</h1>
+                <div class="about">
+                    <div class="left">
+                        <img src="https://images.unsplash.com/photo-1621801306185-8c0ccf9c8eb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+                    </div>
+                    <div class="right">
+                        <p class="main-info">
+                            Marriage Hall Management System is a one stop application for the users which let the users to compare different halls as per their requirements by providing all the information related to that hall such as hall name, hall capacity, hall area, hall cost, providing services by the corresponding hall and their ratings too. Upon deciding about a particular hall, the user can simply book the hall by providing few details and then his/her booking is done.
+                           <br><br>
+                           <b>Explore it further !!!</b>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <section>
+                <div class="footer">
+                    <h4>Copyright &copy; Velocity Prime 2023</h4>
+                </div>
+            </section>
+        </div>
+
+    </body>
+</html>

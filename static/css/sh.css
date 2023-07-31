@@ -1,0 +1,316 @@
+/* This is index.css - The CSS File for 'index.html' */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 25cm;
+    overflow-y: hidden;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(113,0,0,1) 100%);
+}
+
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding-block: 15px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fbf5e0;
+}
+.logo {
+    font-weight: bolder;
+    margin-left: 50px;
+    font-size: 30px;
+}
+.list {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin-right: 1cm;
+    font-size: 20px;
+}
+#toggler,
+.navbar label {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+    }
+}
+
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 22cm;
+    justify-content: center;
+}
+
+img{
+    position: relative;
+    height: 225px;
+    width: 100%;
+}
+
+h3{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2{
+    color: #f5f5f5;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.about{
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+}
+
+
+
+
+
+.footer{
+    margin-top: 5cm;
+    text-align: center;
+    color: #fffefec7;
+    padding: 8px 15px;
+    background-color: transparent;
+}
+
+.main-title{
+    text-align: center;
+    font-size: 24px;
+    margin: 10px;
+}
+.fa-home{
+    color: black;
+}
+
+
+
+
+
+
+.hr1{
+    width: 83%;
+    margin: 1cm auto;
+    border-top: 0;
+    border-bottom: 2px solid #fbf5e0;
+    border-style: dashed;
+}
+
+.hr2{
+    width: 83%;
+    margin: 1cm auto;
+    border-top: 0;
+    border-bottom: 2px solid #fbf5e0;
+    border-style: dashed;
+}
+
+
+.btns{
+    display: inline-block;
+    text-decoration: none;
+    color: #710000;
+    padding: 5px 20px;
+    border: 2px solid #710000;
+    border-radius: 8px;
+}
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 25px #710000, 0 0 50px #da0707;
+    }
+}
+.btns:focus {
+    animation: pulse 0.5s ease-in-out;
+}
+
+
+.container {
+    width: 100%;
+    margin: 0.5cm 0.5cm 0cm 0;
+    padding: 15px;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding-block: 15px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fbf5e0;
+}
+.logo {
+    font-weight: bolder;
+    margin-left: 50px;
+}
+.list {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin-right: 1cm;
+}
+#toggler,
+.navbar label {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+    }
+}
+
+
+h2{
+    text-align: center;
+}
+
+
+
+
+
+
+.modal_container1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    left: 0;
+    width: 100vw;
+}
+
+
+
+.modal{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px 50px;
+    width: 80%;
+    max-width: 100%;
+}
+
+.modal h3{
+    text-align: center;
+    margin: 3px 0;
+    letter-spacing: 3px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: rgba(113,0,0,1);
+    color: #fff;
+    font-size: 18px;
+    height: 25px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+tbody{
+    background-color: #e4e4e4;
+}
+
+tr{
+    transition: all .2s ease-in;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+    height: 25px;
+}
+
+.data:hover{
+    background-color: #f5f5f5;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+td{
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.data .attr{
+    width: 30%;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btns{
+    margin: 10px 0;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}

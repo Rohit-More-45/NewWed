@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- This is the Head Section -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marriage Hall Booking System</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/sh.css') }}">
+        <!-- Link to the CSS File -->
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+
+    <!-- This is the Body Section -->
+    <body>
+        <nav class="navbar container">
+            <a href="LOGIN.html" class="logo">Velocity Prime</a>
+            <input type="checkbox" id="toggler" />
+            <label for="toggler"><i class="ri-menu-line"></i></label>
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="add.html"><i class="fas fa-user-plus    "></i> New</a></li>
+                    <li><a href="booking.html"><i class="fa fa-address-book" aria-hidden="true"></i> Bookings</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <h2>Parishram Mandampam</h2>
+        <hr class="hr1">
+        
+        <div class="modal_container1" id="modal_container1">
+            <div class="modal">
+                <table id="example" class="table hall-1">
+                    <thead>
+                        <td class="attr">Hall Attributes</td>
+                        <td class="attr">Hall Details</td>
+                    </thead>
+
+                    <tbody>
+                        <tr class="data">
+                            <td class="attr">Hall Name</td>
+                            <td>Parishram Mandampam</td>
+                        </tr>
+                        <tr class="data">
+                            <td class="attr">Hall Contact</td>
+                            <td>+91-8975185681</td>
+                        </tr>
+                        <tr class="data">
+                            <td class="attr">Hall Food Cost (per plate)</td>
+                            <td>800</td>
+                        </tr>
+                        <tr class="data">
+                            <td class="attr">Hall Total Cost</td>
+                            <td>85000</td>
+                        </tr>
+                        <tr class="data">
+                            <td class="attr">Hall Capacity</td>
+                            <td>800</td>
+                        </tr>
+                        <tr class="data">
+                            <td class="attr">Hall Address</td>
+                            <td>Yawal Road, Near Anand Niwas, Chopda, Jalgaon, Maharashtra-425107</td>
+                        </tr>
+                        <tr class="data">
+                            <td class="attr">Hall Services</td>
+                            <td>Serves both veg and non-veg food, Located only 10 minutes away from Panjak Stop, In-house decor and catering services provided, Parking space and changing rooms available</td>
+                        </tr>
+                        <tr class="data">
+                            <td class="attr">Hall Rating</td>
+                            <td>4.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="buttons">
+                    <a href="index.html" class="btn btns">Close</button>
+                    <a href="add.html" class="btn btns">Book</a></div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+        <hr class="hr2">
+        <!-- About Us Section -->
+        
+        <!-- Footer Section -->
+        <section>
+            <div class="footer">
+                <h4>Copyright &copy; Velocity Prime 2023</h4>
+            </div>
+        </section>
+
+    </body>
+</html>
